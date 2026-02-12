@@ -142,3 +142,4 @@ Students submit:
 2. Add one more screen (example: `FavoriteSubjects`)
 3. Make hobbies list horizontal or add item separators
 ![alt text](image.png)
+![alt text](image-1.png)
