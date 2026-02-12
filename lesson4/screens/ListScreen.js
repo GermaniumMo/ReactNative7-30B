@@ -37,12 +37,12 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     studentsWrapper: {
-        fontSize: 18,
+        fontSize: 20,
         marginRight: 20,
         padding: 10,
         backgroundColor: '#f0f0f0',
         borderRadius: 5,
-        width: 200,
+        width: 300,
     },
 });
 
