@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-const StudentInfo = ({ fullname, position, description, profileImage }) => {
+const StudentInfo = ({ name, position, description, profileImage }) => {
   return (
     <View style={styles.container}>
       <View style={styles.headerBackground} />
@@ -18,7 +18,7 @@ const StudentInfo = ({ fullname, position, description, profileImage }) => {
       </TouchableOpacity>
 
       <View style={styles.cardContent}>
-        <Text style={styles.fullname}>{fullname}</Text>
+        <Text style={styles.fullname}>{name}</Text>
 
         <Text style={styles.position}>{position}</Text>
 

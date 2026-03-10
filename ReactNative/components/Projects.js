@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-const Projects = ({ images }) => {
+const Projects = ({ image1, image2 }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -11,23 +11,22 @@ const Projects = ({ images }) => {
         </TouchableOpacity>
       </View>
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.scrollView}
-      >
-        <View style={styles.projectsContainer}>
-          {images && images.map((image, index) => (
-            <View key={index} style={styles.projectCard}>
-              <Image
-                source={image}
-                style={styles.projectImage}
-              />
-            </View>
-          ))}
+      <View style={styles.projectsContainer}>
+        <View style={styles.projectCard}>
+          <Image
+            source={image1}
+            style={styles.projectImage}
+          />
         </View>
-      </ScrollView>
+        <View style={styles.projectCard}>
+          <Image
+            source={image2}
+            style={styles.projectImage}
+          />
+        </View>
+      </View>
     </View>
+    
   );
 };
 
