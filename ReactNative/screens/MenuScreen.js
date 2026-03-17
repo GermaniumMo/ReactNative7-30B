@@ -42,6 +42,11 @@ const MenuScreen = (props) => {
             >
                 <Text style={styles.btnText}>API: Comments</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={[styles.btn, styles.apiBtn5]}
+                onPress={() => props.navigation.navigate('Photos')}
+            >
+                <Text style={styles.btnText}>API: Photos</Text>
+            </TouchableOpacity>
         </View>
     );
 };
@@ -76,6 +81,9 @@ const styles = StyleSheet.create({
     },
     apiBtn4: {
         backgroundColor: '#9C27B0'
+    },
+    apiBtn5: {
+        backgroundColor: '#FF6B6B'
     },
     btnText: {
         color: "white",
