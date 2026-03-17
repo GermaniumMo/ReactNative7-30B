@@ -9,6 +9,9 @@ import StudentsScreen from './screens/StudentsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import BoxScreen from './screens/BoxScreen';
 import PostsScreen from './screens/PostsScreen';
+import UsersScreen from './screens/UsersScreen';
+import TodosScreen from './screens/TodosScreen';
+import CommentsScreen from './screens/CommentsScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,7 +19,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Posts"
+        initialRouteName="Menu"
         screenOptions={{
           headerTitle: 'APP',
         }}
@@ -28,6 +31,9 @@ export default function App() {
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="Box" component={BoxScreen}/>
         <Stack.Screen name="Posts" component={PostsScreen}/>
+        <Stack.Screen name="Users" component={UsersScreen}/>
+        <Stack.Screen name="Todos" component={TodosScreen}/>
+        <Stack.Screen name="Comments" component={CommentsScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
