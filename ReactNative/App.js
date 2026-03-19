@@ -13,6 +13,8 @@ import UsersScreen from './screens/UsersScreen';
 import TodosScreen from './screens/TodosScreen';
 import CommentsScreen from './screens/CommentsScreen';
 import PhotosScreen from './screens/PhotosScreen';
+import CountriesScreen from './screens/CountriesScreen';
+import ProductScreen from './screens/ProductScreen';
 
 const Stack = createStackNavigator();
 
@@ -36,6 +38,8 @@ export default function App() {
         <Stack.Screen name="Todos" component={TodosScreen}/>
         <Stack.Screen name="Comments" component={CommentsScreen}/>
         <Stack.Screen name="Photos" component={PhotosScreen}/>
+        <Stack.Screen name="Countries" component={CountriesScreen}/>
+        <Stack.Screen name="Products" component={ProductScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

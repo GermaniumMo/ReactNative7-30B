@@ -1,0 +1,98 @@
+﻿[
+  {
+    "id": "1",
+    "name": "United States",
+    "country": "USA",
+    "description": "A large country spanning North America with diverse landscapes and cultures."
+  },
+  {
+    "id": "2",
+    "name": "Canada",
+    "country": "CAN",
+    "description": "A northern nation known for its vast wilderness, friendly people, and maple syrup."
+  },
+  {
+    "id": "3",
+    "name": "Japan",
+    "country": "JPN",
+    "description": "An island nation in East Asia known for its technology, traditions, and cuisine."
+  },
+  {
+    "id": "4",
+    "name": "Brazil",
+    "country": "BRA",
+    "description": "The largest country in South America, famous for the Amazon rainforest and Carnival."
+  },
+  {
+    "id": "5",
+    "name": "Australia",
+    "country": "AUS",
+    "description": "A continent-country known for its unique wildlife, beaches, and Outback."
+  },
+  {
+    "id": "6",
+    "name": "Germany",
+    "country": "DEU",
+    "description": "A European country known for engineering, beer, and rich history."
+  },
+  {
+    "id": "7",
+    "name": "India",
+    "country": "IND",
+    "description": "A populous South Asian country known for its diverse culture, cuisine, and history."
+  },
+  {
+    "id": "8",
+    "name": "China",
+    "country": "CHN",
+    "description": "A vast East Asian country with rich history, modern cities, and the Great Wall."
+  },
+  {
+    "id": "9",
+    "name": "France",
+    "country": "FRA",
+    "description": "A European country celebrated for its art, cuisine, and landmarks like the Eiffel Tower."
+  },
+  {
+    "id": "10",
+    "name": "South Africa",
+    "country": "ZAF",
+    "description": "A southern African nation known for its wildlife, landscapes, and cultural diversity."
+  },
+  {
+    "id": "11",
+    "name": "Egypt",
+    "country": "EGY",
+    "description": "A North African country famed for ancient pyramids, the Nile River, and historic monuments."
+  },
+  {
+    "id": "12",
+    "name": "Mexico",
+    "country": "MEX",
+    "description": "A North American country known for its rich traditions, food, and vibrant festivals."
+  },
+  {
+    "id": "13",
+    "name": "United Kingdom",
+    "country": "GBR",
+    "description": "A European island nation with a long history, monarchy, and diverse cities."
+  },
+  {
+    "id": "14",
+    "name": "Italy",
+    "country": "ITA",
+    "description": "A European country known for its art, architecture, and delicious cuisine."
+  },
+  {
+    "id": "15",
+    "name": "South Korea",
+    "country": "KOR",
+    "description": "An East Asian country known for technology, pop culture, and mountainous scenery."
+  },
+  {
+    "id": "16",
+    "name": "Spain",
+    "country": "ESP",
+    "description": "A European country celebrated for its beaches, architecture, and tapas."
+  }
+]

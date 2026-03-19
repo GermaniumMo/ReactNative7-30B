@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "Nike Hyperchase",
+    "category": "Men's Basketball Shoes",
+    "price": 125,
+    "stock": 15,
+    "image": "https://picsum.photos/500/500?random=1",
+    "link": "https://www.nike.com/t/hyperchase-basketball-shoe/FD8352",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatem fugit quibusdam, reprehenderit et neque exercitationem deleniti dolor nobis laborum consectetur accusantium impedit ea cumque alias, molestias totam, porro quas."
+  },
+  {
+    "id": "2",
+    "name": "Nike Air Max 90",
+    "category": "Men's Running Shoes",
+    "price": 150,
+    "stock": 22,
+    "image": "https://picsum.photos/500/500?random=2",
+    "link": "https://www.nike.com/t/air-max-90-mens-shoes/CW7475-101",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatem fugit quibusdam, reprehenderit et neque exercitationem deleniti dolor nobis laborum consectetur accusantium impedit ea cumque alias, molestias totam, porro quas."
+  },
+  {
+    "id": "3",
+    "name": "Nike React Vision",
+    "category": "Women's Casual Shoes",
+    "price": 135,
+    "stock": 18,
+    "image": "https://picsum.photos/500/500?random=3",
+    "link": "https://www.nike.com/t/react-vision-womens-shoe-CI7523",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatem fugit quibusdam, reprehenderit et neque exercitationem deleniti dolor nobis laborum consectetur accusantium impedit ea cumque alias, molestias totam, porro quas."
+  },
+  {
+    "id": "4",
+    "name": "Nike Court Vision",
+    "category": "Men's Basketball Shoes",
+    "price": 110,
+    "stock": 25,
+    "image": "https://picsum.photos/500/500?random=4",
+    "link": "https://www.nike.com/t/court-vision-mens-shoe/CD5438-100",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatem fugit quibusdam, reprehenderit et neque exercitationem deleniti dolor nobis laborum consectetur accusantium impedit ea cumque alias, molestias totam, porro quas."
+  },
+  {
+    "id": "5",
+    "name": "Nike Revolution",
+    "category": "Children's Running Shoes",
+    "price": 75,
+    "stock": 30,
+    "image": "https://picsum.photos/500/500?random=5",
+    "link": "https://www.nike.com/t/revolution-kids-running-shoe-DJ2032",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatem fugit quibusdam, reprehenderit et neque exercitationem deleniti dolor nobis laborum consectetur accusantium impedit ea cumque alias, molestias totam, porro quas."
+  },
+  {
+    "id": "6",
+    "name": "Nike Phantom Vision",
+    "category": "Soccer Shoes",
+    "price": 200,
+    "stock": 12,
+    "image": "https://picsum.photos/500/500?random=6",
+    "link": "https://www.nike.com/t/phantom-vision-elite-soccer-shoe-AO3287",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatem fugit quibusdam, reprehenderit et neque exercitationem deleniti dolor nobis laborum consectetur accusantium impedit ea cumque alias, molestias totam, porro quas."
+  },
+  {
+    "id": "7",
+    "name": "Nike Blazer Mid",
+    "category": "Lifestyle Shoes",
+    "price": 120,
+    "stock": 20,
+    "image": "https://picsum.photos/500/500?random=7",
+    "link": "https://www.nike.com/t/blazer-mid-77-casual-shoe-CZ8127-101",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatem fugit quibusdam, reprehenderit et neque exercitationem deleniti dolor nobis laborum consectetur accusantium impedit ea cumque alias, molestias totam, porro quas."
+  },
+  {
+    "id": "8",
+    "name": "Nike Pegasus 39",
+    "category": "Women's Running Shoes",
+    "price": 140,
+    "stock": 28,
+    "image": "https://picsum.photos/500/500?random=8",
+    "link": "https://www.nike.com/t/pegasus-39-womens-running-shoe-DH6616",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatem fugit quibusdam, reprehenderit et neque exercitationem deleniti dolor nobis laborum consectetur accusantium impedit ea cumque alias, molestias totam, porro quas."
+  }
+]

@@ -47,6 +47,17 @@ const MenuScreen = (props) => {
             >
                 <Text style={styles.btnText}>API: Photos</Text>
             </TouchableOpacity>
+                        <TouchableOpacity style={[styles.btn, styles.apiBtn5]}
+                onPress={() => props.navigation.navigate('Countries')}
+            >
+                <Text style={styles.btnText}>Countries</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.btn, styles.apiBtn5]}
+                onPress={() => props.navigation.navigate('Products')}
+            >
+                <Text style={styles.btnText}>Products</Text>
+            </TouchableOpacity>
+
         </View>
     );
 };
