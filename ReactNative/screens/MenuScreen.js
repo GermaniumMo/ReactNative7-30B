@@ -7,6 +7,11 @@ const MenuScreen = (props) => {
             <Text style={styles.textStyle}>
                 Welcome to Menu Screen
             </Text>
+            <TouchableOpacity style={[styles.btn, styles.homeBtn]}
+                onPress={() => props.navigation.navigate('Home')}
+            >
+                <Text style={styles.btnText}>Go to Home Screen</Text>
+            </TouchableOpacity>
             <Button
                 title="Go to List Screen"
                 color="purple"
@@ -47,17 +52,16 @@ const MenuScreen = (props) => {
             >
                 <Text style={styles.btnText}>API: Photos</Text>
             </TouchableOpacity>
-                        <TouchableOpacity style={[styles.btn, styles.apiBtn5]}
+            <TouchableOpacity style={[styles.btn, styles.apiBtn6]}
                 onPress={() => props.navigation.navigate('Countries')}
             >
-                <Text style={styles.btnText}>Countries</Text>
+                <Text style={styles.btnText}>API: Countries</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.btn, styles.apiBtn5]}
+            <TouchableOpacity style={[styles.btn, styles.productBtn]}
                 onPress={() => props.navigation.navigate('Products')}
             >
                 <Text style={styles.btnText}>Products</Text>
             </TouchableOpacity>
-
         </View>
     );
 };
@@ -80,6 +84,9 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         borderRadius: 8
     },
+    homeBtn: {
+        backgroundColor: '#FF6347'
+    },
     apiBtn: {
         backgroundColor: '#007AFF',
         marginTop: 20
@@ -94,6 +101,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#9C27B0'
     },
     apiBtn5: {
+        backgroundColor: '#FF6B6B'
+    },
+    apiBtn6: {
+        backgroundColor: '#34C759'
+    },
+    productBtn: {
         backgroundColor: '#FF6B6B'
     },
     btnText: {

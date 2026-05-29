@@ -1,26 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image, Linking } from "react-native";
-import data from "../data/products.json";
+import PropTypes from "prop-types";
+import productsData from "../data/products.json";
 
-class ProductScreen extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            products: [],
-        };
-    }
-    componentDidMount() {
-        this.setState({ products: data });
-    }
-  render() {
+function ProductScreen({ navigation }) {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        setProducts(productsData);
+    }, []);
+
     return (
         <View style={styles.container}>
             <Text style={styles.screenTitle}>Products Screen</Text>
             <FlatList
                 style={styles.list}
                 contentContainerStyle={{ paddingBottom: 20 }}
-                data={this.state.products}
-                keyExtractor={(products) => products.id}
+                data={products}
+                keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => (
                     <View style={styles.cardWrapper}>
                         <Image
@@ -50,14 +47,13 @@ class ProductScreen extends React.Component {
             <View style={styles.buttonContainer}>
                 <TouchableOpacity
                     style={styles.backButton}
-                    onPress={() => this.props.navigation.goBack()}
+                    onPress={() => navigation.goBack()}
                 >
                     <Text style={styles.buttonText}>← Go Back</Text>
                 </TouchableOpacity>
             </View>
         </View>
     );
-    }
 }
 
 const styles = StyleSheet.create({
@@ -172,4 +168,11 @@ const styles = StyleSheet.create({
         fontWeight: '600'
     },
 });
+
+ProductScreen.propTypes = {
+    navigation: PropTypes.shape({
+        goBack: PropTypes.func.isRequired,
+    }).isRequired,
+};
+
 export default ProductScreen;

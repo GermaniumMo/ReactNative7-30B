@@ -1,39 +1,50 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 
-const Projects = ({ image1, image2 }) => {
+export const projectImages = [
+  { id: '1', image: require('../assets/project1.png') },
+  { id: '2', image: require('../assets/project2.png') },
+  { id: '3', image: require('../assets/project1.png') },
+  { id: '4', image: require('../assets/project2.png') },
+  { id: '5', image: require('../assets/project1.png') },
+  { id: '6', image: require('../assets/project2.png') },
+];
+
+const Projects = ({ onViewAll }) => {
+  const renderProject = ({ item }) => (
+    <View style={styles.projectCard}>
+      <Image source={item.image} style={styles.projectImage} />
+    </View>
+  );
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>PROJECTS</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onViewAll}>
           <Text style={styles.viewAll}>View All</Text>
         </TouchableOpacity>
       </View>
 
-      <View style={styles.projectsContainer}>
-        <View style={styles.projectCard}>
-          <Image
-            source={image1}
-            style={styles.projectImage}
-          />
-        </View>
-        <View style={styles.projectCard}>
-          <Image
-            source={image2}
-            style={styles.projectImage}
-          />
-        </View>
-      </View>
+      <FlatList
+        data={projectImages}
+        keyExtractor={(item) => item.id}
+        horizontal={true}
+        nestedScrollEnabled
+        scrollEnabled
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.projectsContainer}
+        renderItem={renderProject}
+      />
     </View>
-    
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 20,
-    paddingHorizontal: 20,
+    marginTop: 6,
+    marginBottom: 20,
+    paddingHorizontal: 18,
   },
   header: {
     flexDirection: 'row',
@@ -42,42 +53,38 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   title: {
-    fontSize: 18,
+    fontSize: 34,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#161616',
   },
   viewAll: {
-    fontSize: 14,
+    fontSize: 31,
     color: '#fff',
-    backgroundColor: '#FFD700',
+    backgroundColor: '#FFD400',
     paddingVertical: 8,
-    paddingHorizontal: 15,
-    borderRadius: 15,
+    paddingHorizontal: 20,
+    borderRadius: 22,
     fontWeight: '600',
     overflow: 'hidden',
   },
-  scrollView: {
-    marginLeft: -20,
-    paddingLeft: 20,
-  },
   projectsContainer: {
-    flexDirection: 'row',
-    gap: 15,
+    paddingRight: 6,
   },
   projectCard: {
-    marginRight: 10,
-    borderRadius: 12,
+    width: 170,
+    borderRadius: 16,
     overflow: 'hidden',
+    marginRight: 14,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 3.84,
-    elevation: 5,
+    shadowOpacity: 0.08,
+    shadowRadius: 4,
+    elevation: 3,
   },
   projectImage: {
-    width: 160,
-    height: 200,
-    borderRadius: 12,
+    width: '100%',
+    height: 190,
+    borderRadius: 16,
   },
 });
 

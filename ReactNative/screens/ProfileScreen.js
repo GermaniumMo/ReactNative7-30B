@@ -1,21 +1,46 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import StudentInfo from '../components/StudentInfo';
+import { FlatList, StyleSheet } from 'react-native';
+import ProfileInfo from '../components/ProfileInfo';
 import Projects from '../components/Projects';
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ navigation }) => {
+  const sections = [
+    { id: 'profile' },
+    { id: 'projects' },
+  ];
+
   return (
-    <View style={styles.container}>
-      <StudentInfo name="JOHN DOE" position="UI/UX Designer" description="We're passionate about creating beautiful designing for startups & leading brands" profileImage={require('../assets/avatar1.png')}/>
-      <Projects image1={require('../assets/project1.png')} image2={require('../assets/project2.png')}/>
-    </View>
+    <FlatList
+      style={styles.container}
+      contentContainerStyle={styles.content}
+      data={sections}
+      keyExtractor={(item) => item.id}
+      showsVerticalScrollIndicator={false}
+      renderItem={({ item }) => {
+        if (item.id === 'profile') {
+          return (
+            <ProfileInfo
+              name="JOHN DOE"
+              position="UI/UX Designer"
+              description="We're passionate about creating beautiful desing for startups & leading brands"
+              profileImage={require('../assets/download.png')}
+            />
+          );
+        }
+
+        return <Projects onViewAll={() => navigation.navigate('Projects')} />;
+      }}
+    />
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#F5F5F5',
+  },
+  content: {
+    paddingBottom: 24,
   },
 });
 
