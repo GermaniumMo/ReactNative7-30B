@@ -18,3 +18,40 @@ npx expo-doctor
 # standard metro.config.js
 const { getDefaultConfig } = require('expo/metro-config');
 module.exports = getDefaultConfig(__dirname);
+
+## Pre-commit hook
+
+This repository includes a lightweight pre-commit hook that validates staged files to help prevent accidentally committing large or ignored files (for example, `node_modules`).
+
+- Hook location: `.githooks/pre-commit`
+- Validator script: `digitalschool/scripts/validate_staged.js`
+
+What it checks:
+- Detects staged paths containing `node_modules` and aborts the commit.
+- Fails the commit if any staged file is larger than 5 MB.
+
+How to run the validator manually:
+
+```bash
+# From the repository root
+node digitalschool/scripts/validate_staged.js
+```
+
+Enable hooks for a fresh clone:
+
+```bash
+# Run once after cloning to enable the bundled hooks
+git config core.hooksPath .githooks
+```
+
+Notes:
+- The hook requires Node.js to run. If Node is not available the hook will stop the commit.
+- To bypass temporarily (not recommended), you can disable hooks locally with:
+
+```bash
+# Restore default hooks path (or set to your preferred hooks directory)
+git config core.hooksPath $(git rev-parse --git-dir)/hooks
+```
+
+If the hook aborts a commit, run the validator manually to see details, fix the staged files, then retry the commit.
+
