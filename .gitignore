@@ -7,8 +7,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 *.log
-package-lock.json
 /.idea/
 android/.gradle/
 build/
 dist/
+
+# Ignore local OS files
+Thumbs.db
+
+# Ignore user-specific VS Code workspace storage (if any)
+.vscode/settings.json
