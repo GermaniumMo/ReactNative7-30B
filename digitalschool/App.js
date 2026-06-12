@@ -1,28 +1,38 @@
-// initialize gesture handler at the very top-level of the app
+/**
+ * Root entry for the digitalschool app.
+ * - Initialize gesture handling
+ * - Provide safe-area context
+ * - Mount the React Navigation container and root navigator
+ */
+
+// Must be imported before any other library that uses gesture handling
 import 'react-native-gesture-handler';
-// import React to enable JSX and component definitions
+// React is required to use JSX and create components
 import React from 'react';
-// GestureHandlerRootView provides the root view required by react-native-gesture-handler
+// Provides a native root view for react-native-gesture-handler
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-// SafeAreaProvider gives access to safe area insets (notch, status bar, etc.)
+// Supplies safe-area insets (notch, status bar, rounded corners) to children
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-// NavigationContainer is the root provider for React Navigation state
+// NavigationContainer holds the navigation state and linking configuration
 import { NavigationContainer } from '@react-navigation/native';
-// The top-level drawer navigator that composes tabs/stacks
+// App's top-level navigator (drawer that composes tabs/stacks)
 import DrawerNavigator from './navigation/DrawerNavigator';
 
-// Default export for the root App component
+// Default exported App component - mounted by the app registry
 export default function App() {
-  // Render the application tree with required providers
+  // The app tree must be wrapped with these providers in this order:
+  // 1) GestureHandlerRootView — enables native gestures
+  // 2) SafeAreaProvider — makes safe-area insets available
+  // 3) NavigationContainer — provides navigation context/state
   return (
-    // GestureHandlerRootView must wrap the app to enable native gesture handling
     <GestureHandlerRootView style={{ flex: 1 }}>
-      {/* SafeAreaProvider exposes safe-area insets to children */}
+      {/* GestureHandlerRootView: required top-level container for gestures */}
       <SafeAreaProvider>
-        {/* NavigationContainer holds navigation state and linking configuration */}
+        {/* SafeAreaProvider: exposes safe-area insets to descendant components */}
         <NavigationContainer>
-          {/* App's root navigator (drawer) */}
+          {/* NavigationContainer: manages navigation tree and state */}
           <DrawerNavigator />
+          {/* DrawerNavigator: the app's root navigator (drawer -> tabs/stacks) */}
         </NavigationContainer>
       </SafeAreaProvider>
     </GestureHandlerRootView>
