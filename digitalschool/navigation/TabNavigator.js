@@ -14,7 +14,7 @@ const Tab = createBottomTabNavigator();
 
 // Styling for the tab bar (shared)
 const tabBarStyle = {
-  backgroundColor: '#FF6347',
+  backgroundColor: '#384053', // modern 2026 theme color
 };
 
 // BottomTabNavigator composes the main Home stack and the About screen

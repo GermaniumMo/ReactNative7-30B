@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 
 // Shared default options for all stack screens (consistent styling)
 const defaultScreenOptions = {
-  headerStyle: { backgroundColor: '#FF6347' }, // header background color
+  headerStyle: { backgroundColor: '#384053' }, // header background color (modern 2026 theme)
   headerTintColor: '#fff', // header text/icon color
   headerTitleStyle: { fontWeight: 'bold' }, // header title font weight
 };
