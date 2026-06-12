@@ -1,0 +1,20 @@
+#!/bin/sh
+# Pre-commit hook: run the staged-file validator for digitalschool
+# This hook prevents committing `node_modules` or large files accidentally.
+
+# Resolve repository root (fallback to current directory)
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || printf '.')"
+
+if ! command -v node >/dev/null 2>&1; then
+  echo "Pre-commit: Node.js is required to run staged-file validator. Aborting commit."
+  exit 1
+fi
+
+node "$REPO_ROOT/digitalschool/scripts/validate_staged.js"
+STATUS=$?
+if [ $STATUS -ne 0 ]; then
+  echo "Pre-commit: staged-file validation failed. Aborting commit."
+  exit $STATUS
+fi
+
+exit 0
