@@ -20,7 +20,8 @@ if (staged.length === 0) {
 }
 
 // Prevent accidentally committing node_modules
-const nodeModulesStaged = staged.filter(f => /(^|\\/)node_modules(\\/|$)/.test(f));
+// Use a simple string check to avoid regex parsing issues across shells
+const nodeModulesStaged = staged.filter(f => f.includes('node_modules'));
 if (nodeModulesStaged.length) {
   console.error('ERROR: Detected node_modules paths in staged files (do not commit node_modules):');
   nodeModulesStaged.forEach(f => console.error('  ' + f));
